@@ -7,11 +7,6 @@ screen = turtle.Screen()
 
 # add shapes into turtle
 turtle.register_shape('win.gif')
-turtle.register_shape('lose.gif')
-turtle.register_shape('draw.gif')
-turtle.register_shape('paper.gif')
-turtle.register_shape('rock.gif')
-turtle.register_shape('scissor.gif')
 
 #crete turtle
 robot = turtle.Turtle(shape='turtle')
@@ -48,22 +43,7 @@ def choose_shape(x, y):
     if player_choice == 'rock' and robot_choice == 'paper':
         turtle.Turtle(shape='lose.gif')
     if player_choice == 'rock' and robot_choice == 'scissor':
-        turtle.Turtle(shape='win.gif')
-
-    if player_choice == 'paper' and robot_choice == 'paper':
-        turtle.Turtle(shape='draw.gif')
-    if player_choice == 'paper' and robot_choice == 'scissor':
-        turtle.Turtle(shape='lose.gif')
-    if player_choice == 'paper' and robot_choice == 'rock':
-        turtle.Turtle(shape='win.gif')
-
-    if player_choice == 'scissor' and robot_choice == 'scissor':
-        turtle.Turtle(shape='draw.gif')
-    if player_choice == 'scissor' and robot_choice == 'rock':
-        turtle.Turtle(shape='lose.gif')
-    if player_choice == 'scissor' and robot_choice == 'paper':
-        turtle.Turtle(shape='win.gif')    
-
+        turtle.Turtle(shape='win.gif')   
 
 # listen for mouse click
 screen.onclick(choose_shape)
